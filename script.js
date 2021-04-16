@@ -4,19 +4,20 @@ const hoursEl = document.getElementById('hours');
 const minsEl = document.getElementById('mins');
 const secondsEl = document.getElementById('seconds');
 
-const newYears = "15 Nov  2021";
+const Examkidate = "15 Nov 2021";
 
 function countdown(){
 
-const newYearDate = new Date(newYears);
+const EXAMDATE = new Date(Examkidate);
 const currentDate = new Date();
 
-const TotalSeconds = (newYearDate - currentDate) / 1000 ;
+const TotalSeconds = (EXAMDATE - currentDate) / 1000 ;
 //calculate 
 const days = Math.floor(TotalSeconds / 3600 / 24 );
 const hours = Math.floor(TotalSeconds / 3600) %24;
 const mins = Math.floor(TotalSeconds / 60)% 60;
 const seconds = Math.floor(TotalSeconds % 60);
+///const DEAD END = 6000 - Math.floor(TotalSeconds % 60);
 
  daysEl.innerHTML = formatTime(days);
  hoursEl.innerHTML = formatTime(hours);
